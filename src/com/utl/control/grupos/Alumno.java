@@ -8,16 +8,16 @@ public class Alumno {
     public String nombre;
     public String clave;
     public int telefono;
-    public int cuatrimestre;
+    public int semestre;
     public String sexo;
     public AlumnoMateria[] materias;
 
-    public Alumno(int matricula, String nombre, String clave, int telefono, int cuatrimestre, String sexo, AlumnoMateria[] materias) {
+    public Alumno(int matricula, String nombre, String clave, int telefono, int semestre, String sexo, AlumnoMateria[] materias) {
         this.matricula = matricula;
         this.nombre = nombre;
         this.clave = clave;
         this.telefono = telefono;
-        this.cuatrimestre = cuatrimestre;
+        this.semestre = semestre;
         this.sexo = sexo;
         this.materias = materias;
     }
@@ -26,7 +26,7 @@ public class Alumno {
     public String consultarNombre() { return nombre; }
     public String consultarClave() { return clave; }
     public int consultarTelefono() { return telefono; }
-    public int consultarCuatrimestre() { return cuatrimestre; }
+    public int consultarSemestre() { return semestre; }
     public String consultarSexo() { return sexo; }
     public AlumnoMateria[] consultarMaterias() { return materias; }
 
