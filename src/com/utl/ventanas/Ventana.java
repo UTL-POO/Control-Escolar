@@ -31,4 +31,24 @@ abstract public class Ventana {
                 imagen
         );
     }
+
+    public void mostrarTexto(String texto) {
+        JOptionPane.showMessageDialog(
+                null,
+                texto
+        );
+    }
+
+    public int mostrarOpciones(String titulo, String texto, Object[] opciones) {
+        return JOptionPane.showOptionDialog(
+                null,
+                texto,
+                titulo,
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                opciones,
+                0
+        );
+    }
 }

@@ -12,6 +12,8 @@ public class Alumno {
     public String sexo;
     public AlumnoMateria[] materias;
 
+    public Alumno() { }
+
     public Alumno(int matricula, String nombre, String clave, int telefono, int semestre, String sexo, AlumnoMateria[] materias) {
         this.matricula = matricula;
         this.nombre = nombre;
@@ -21,6 +23,11 @@ public class Alumno {
         this.sexo = sexo;
         this.materias = materias;
     }
+
+    public void definirMatricula(int matricula) { this.matricula = matricula; }
+    public void definirNombre(String nombre) { this.nombre = nombre; }
+    public void definirTelefono(int telefono) { this.telefono = telefono; }
+    public void definirSexo(String sexo) { this.sexo = sexo; }
 
     public int consultarMatricula() { return matricula; }
     public String consultarNombre() { return nombre; }
