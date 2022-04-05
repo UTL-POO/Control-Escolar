@@ -1,5 +1,8 @@
 package com.utl.ventanas;
 
+import com.utl.control.personal.Personal;
+import com.utl.session.Session;
+
 import javax.swing.*;
 
 abstract public class Ventana {

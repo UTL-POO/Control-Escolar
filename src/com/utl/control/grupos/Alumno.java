@@ -1,40 +1,23 @@
 package com.utl.control.grupos;
 
 import com.utl.control.materias.AlumnoMateria;
+import com.utl.control.personal.Personal;
 
-public class Alumno {
-    
-    public int matricula;
-    public String nombre;
-    public String clave;
-    public int telefono;
+public class Alumno extends Personal {
+
     public int semestre;
-    public String sexo;
     public AlumnoMateria[] materias;
 
     public Alumno() { }
 
-    public Alumno(int matricula, String nombre, String clave, int telefono, int semestre, String sexo, AlumnoMateria[] materias) {
-        this.matricula = matricula;
-        this.nombre = nombre;
-        this.clave = clave;
-        this.telefono = telefono;
+    public Alumno(int matricula, String nombre, String clave, int telefono, int semestre, String sexo, String correo, AlumnoMateria[] materias) {
+        super(matricula, nombre, clave, telefono, sexo, correo);
+
         this.semestre = semestre;
-        this.sexo = sexo;
         this.materias = materias;
     }
 
-    public void definirMatricula(int matricula) { this.matricula = matricula; }
-    public void definirNombre(String nombre) { this.nombre = nombre; }
-    public void definirTelefono(int telefono) { this.telefono = telefono; }
-    public void definirSexo(String sexo) { this.sexo = sexo; }
-
-    public int consultarMatricula() { return matricula; }
-    public String consultarNombre() { return nombre; }
-    public String consultarClave() { return clave; }
-    public int consultarTelefono() { return telefono; }
     public int consultarSemestre() { return semestre; }
-    public String consultarSexo() { return sexo; }
     public AlumnoMateria[] consultarMaterias() { return materias; }
 
 }

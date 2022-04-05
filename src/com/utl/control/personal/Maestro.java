@@ -1,29 +1,17 @@
 package com.utl.control.personal;
 
-public class Maestro {
+import com.utl.control.grupos.Grupo;
 
-    //ATRIBUTOS CLASE MAESTRO
-    private int matricula; //matricula del profesor
-    private String nombre; //nombre del profesor
-    private String sexo;  //género del profesor
-    private String clave; //clave del profesor
-    private int telefono; //télefono del profesor
-    private String correo; //correo electronico del profesor
+public class Maestro extends Personal {
 
-    public Maestro(int matricula, String nombre, String sexo, String clave, int telefono, String correo) {
-        this.matricula = matricula;
-        this.nombre = nombre;
-        this.sexo = sexo;
-        this.clave = clave;
-        this.telefono = telefono;
-        this.correo = correo;
+    private Grupo[] grupos;
+
+    public Maestro() { }
+
+    public Maestro(int matricula, String nombre, String clave, int telefono, String sexo, String correo) {
+        super(matricula, nombre, clave, telefono, sexo, correo);
     }
 
-    public int consultarMatricula() { return this.matricula; }
-    public String consultarNombre() { return this.nombre; }
-    public String consultarSexo() { return this.sexo; }
-    public String consultarClave() { return this.clave; }
-    public int consultarTelefono() { return this.telefono; }
-    public String consultarCorreo() { return this.correo; }
+    public Grupo[] obtenerGrupos() { return this.grupos; }
 
 }

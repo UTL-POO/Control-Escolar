@@ -1,6 +1,7 @@
 package com.utl.ventanas.admin;
 
 import com.utl.control.grupos.Alumno;
+import com.utl.session.Session;
 import com.utl.ventanas.Ventana;
 
 import javax.swing.*;
@@ -8,19 +9,20 @@ import javax.swing.*;
 public class AlumnosVentana extends Ventana {
 
     private Alumno alumno_temp;
+    private Session session;
 
-    public AlumnosVentana() {
+    public AlumnosVentana(Session session) {
         this.iniciar();
+        this.session = session;
     }
 
+    public Session conseguirSession() { return session; }
+
     public void iniciar() {
+        String tabla = "| Matricula | Nombre       | Sexo | Grupo  | Telefono   | Semestre |" + "\n";
+
         switch (super.mostrarOpciones(
-                "Lista de alumnos",
-                "| Matricula | Nombre       | Sexo | Grupo  | Telefono   | Semestre |" + "\n" +
-                        "|  210001  | Alejandro R.  |   M  | DSM201 | 4776807121 |    1     |" + "\n" +
-                        "|  210002  | Uriel Vallejo |   M  | DSM201 | 4773837182 |    1     |" + "\n" +
-                        "|  210003  | Cuitlahuac R. |   M  | DSM202 | 4775983823 |    1     |" + "\n" +
-                        "|  210004  | Patricio Rey. |   M  | DSM202 | 4779282123 |    1     |" + "\n",
+                "Lista de alumnos", tabla,
                 new Object[] {"Agregar Alumno", "Eliminar Alumno"}
         )) {
             case 0:
